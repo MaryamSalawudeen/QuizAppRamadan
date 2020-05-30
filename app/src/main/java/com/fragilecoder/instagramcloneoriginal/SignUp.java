@@ -26,7 +26,7 @@ private EditText edtName, edtpunchpower, edtKickspeed,edtPunchspeed, edtKickpowe
 private TextView txtgetdata;
 private Button btngetall;
 private String allkickboxers;
-
+private Button btnswitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ private String allkickboxers;
 
         txtgetdata = findViewById(R.id.txtgetdata);
         btngetall = findViewById(R.id.btngetall);
+        btnswitch = findViewById(R.id.btnswitch);
         txtgetdata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +65,10 @@ private String allkickboxers;
 
                 allkickboxers = " ";
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("kickboxer");
+//                queryAll.whereGreaterThan("punchpower", 3000);
+
+                queryAll.whereGreaterThanOrEqualTo("punchpower", 2000);
+                queryAll.setLimit(2);
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -84,6 +89,12 @@ private String allkickboxers;
             }
         });
 
+        btnswitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
                     }
 
 

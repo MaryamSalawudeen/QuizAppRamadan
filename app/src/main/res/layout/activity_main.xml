@@ -105,4 +105,15 @@
         android:text="Get All Kick Boxers!"
         android:textColor="@color/colorPrimary" />
 
+    <Button
+        android:id="@+id/btnswitch"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="7dp"
+        android:text="switch to new activity."
+        android:textSize="20sp" />
+
 </RelativeLayout>
