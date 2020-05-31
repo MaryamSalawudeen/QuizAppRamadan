@@ -1,119 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
-
+    android:background="@drawable/gradient"
+    tools:actionBarNavMode="standard"
+    tools:context=".SignUp"
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/edtName"
-        android:layout_width="match_parent"
+        android:id="@+id/edtpassword"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="284dp"
         android:ems="10"
-        android:hint="please enter the name of the kickboxer..."
-        android:inputType="textPersonName" />
+        android:fontFamily="@font/sofiaregular"
+        android:hint="Enter your password....."
+        android:inputType="textPassword"
+        android:textColorHint="#B80F4B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/edtKickspeed"
-        android:layout_width="match_parent"
+        android:id="@+id/edtemail"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="146dp"
-        android:ems="10"
-        android:hint="please enter the kickspeed...."
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/edtKickpower"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="296dp"
-        android:ems="10"
-        android:hint="please enter the kickpower....."
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/edtPunchspeed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="227dp"
-        android:ems="10"
-        android:hint="please enter the punch speed..."
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/edtpunchpower"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-3dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="200dp"
         android:ems="10"
-        android:hint="please enter the punch power..."
-        android:inputType="textPersonName" />
+        android:fontFamily="@font/sofiaregular"
+        android:hint="Enter your email....."
+        android:inputType="textEmailAddress"
+        android:textColorHint="#B80F4B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/btnsave"
-        android:layout_width="327dp"
+    <EditText
+        android:id="@+id/edtusername"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="72dp"
-        android:text="SAVE KICKBOXER TO THE SERVER!" />
+        android:layout_marginTop="196dp"
+        android:ems="10"
+        android:fontFamily="@font/sofiaregular"
+        android:hint="Enter your username....."
+        android:inputType="textPersonName"
+        android:textColorHint="#B80F4B"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/txtgetdata"
-        android:layout_width="327dp"
-        android:layout_height="58dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginBottom="384dp"
-        android:text="Get Data from Parse Server!"
-        android:textColor="#A034B3"
-        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="132dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="151dp"
+        android:background="#ba2fd6"
+        app:layout_constraintBottom_toTopOf="@+id/edtpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/instagramlogo" />
 
-    <Button
-        android:id="@+id/btngetall"
-        android:layout_width="270dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginBottom="289dp"
-        android:background="#3CF80C0C"
-        android:shadowColor="#00EBE0E0"
-        android:text="Get All Kick Boxers!"
-        android:textColor="@color/colorPrimary" />
-
-    <Button
-        android:id="@+id/btnswitch"
-        android:layout_width="347dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginBottom="7dp"
-        android:text="switch to new activity."
-        android:textSize="20sp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="150dp"
+        android:background="#8251D6"
+        android:fontFamily="@font/sofiaregular"
+        android:text="SignUp"
+        android:textColor="#B80F4B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtpassword"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="150dp"
+        android:background="#8251D6"
+        android:fontFamily="@font/sofiaregular"
+        android:text="Login"
+        android:textColor="#B80F4B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtpassword"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="84dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
