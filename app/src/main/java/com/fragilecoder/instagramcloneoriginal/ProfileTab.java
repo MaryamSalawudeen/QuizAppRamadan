@@ -35,7 +35,8 @@ public class ProfileTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile_tab, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile_tab, container,
+                false);
 
         edtbio = view.findViewById(R.id.edtbio);
         edtprofilename = view.findViewById(R.id.edtprofilename);
@@ -44,14 +45,40 @@ public class ProfileTab extends Fragment {
         edtprofession = view.findViewById(R.id.edtprofession);
         btnupdate = view.findViewById(R.id.btnupdate);
         final ParseUser parseUser = ParseUser.getCurrentUser();
+        if (parseUser.get("profilename") == null ) {
+            edtprofilename.setText( " ");
+        } else {
+            edtprofilename.setText(parseUser.get("profilename") + " ");
+        }
+        if (parseUser.get("profession") == null) {
+            edtprofession.setText(" ");
+        } else {
+            edtprofession.setText(parseUser.get("profession") + " ");
+        }
+        if (parseUser.get("edtsport") == null) {
+            edtsport.setText(" ");
+        } else {
+            edtsport.setText(parseUser.get("sport") + " ");
+        }
+        if (parseUser.get("bio") == null) {
+            edtbio.setText(" ");
+        } else {
+            edtbio.setText(parseUser.get("bio") + " ");
+        }
+        if (parseUser.get("hobbies") == null) {
+            edthobbies.setText(" ");
+        } else {
+            edthobbies.setText(parseUser.get("hobbies") + " ");
+        }
+
         btnupdate.setOnClickListener(new View.OnClickListener() {
 
 
 
 
             @Override
-            public void onClick(View view) {
-               parseUser.put("profile name", edtprofilename.getText().toString());
+            public void onClick(View v) {
+               parseUser.put("profilename", edtprofilename.getText().toString());
                parseUser.put("bio", edtbio.getText().toString());
                parseUser.put("profession", edtprofession.getText().toString());
                parseUser.put("hobbies", edthobbies.getText().toString());
