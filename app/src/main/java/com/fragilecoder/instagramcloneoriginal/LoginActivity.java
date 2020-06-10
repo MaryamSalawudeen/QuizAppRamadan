@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.shashank.sony.fancytoastlib.FancyToast;
@@ -79,8 +78,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.btnsignup1:
-
-
+                Intent intent = new Intent(LoginActivity.this,SignUp.class);
+                startActivity(intent);
                 break;
 
         }
@@ -102,5 +101,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         private void transitiontosocialmediaactivity() {
             Intent intent = new Intent(LoginActivity.this, SocialMediaActivity.class);
             startActivity(intent);
+            finish();
         }
 }
