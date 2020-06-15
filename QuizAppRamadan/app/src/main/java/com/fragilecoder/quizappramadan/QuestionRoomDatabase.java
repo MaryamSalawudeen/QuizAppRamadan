@@ -49,13 +49,11 @@ public abstract class QuestionRoomDatabase extends RoomDatabase {
         protected Void doInBackground(Void... voids) {
             questionDao.insert(new Questions("In what chapter of the quran did Allah teach us the etiquettes of entering into somebody else’s house?" ,
                     "Suratul Ankabut","Suratul Mujadilah","Suratun Noor","Suratul Maryam",3));
-            questionDao.insert(new Questions("What are the names of the idols worshipped in Makkah (before the advent of Islam)  mentioned \n" +
-                    "    in the Quran? " ,
+            questionDao.insert(new Questions("What are the names of the idols worshipped in Makkah (before the advent of Islam)  mentioned in the Quran? " ,
                     "Laat, Uzzah, Manaat","Laat , Ghurapath, Manaat","Ghurapath, Lomu, ffagu","Ffagu,Laat,Uzzah",1));
             questionDao.insert(new Questions("Pick 5 prophets sent to Banu Israee." ,
                     "Dawood,Isa,Musa,Shammeel,Hizqeel","Adam,Nuh,Yushau,Shammeel,Dhul Khifl","Muhammad,Musa,Adam,Yusuf,Isa","Isa, Musa, Yusuf, Yushau, Shammeel ",4));
-            questionDao.insert(new Questions(" “La ilaha illalah lahu l mulk wa lahu l hamdu yuhyee wa yumeet wa huwa hayyu la yamut  \n" +
-                    "    biyadihi l khayr wa huwa ala kulli shaeyin Qadeer” is a prayer made when?" ,
+            questionDao.insert(new Questions(" “La ilaha illalah lahu l mulk wa lahu l hamdu yuhyee wa yumeet wa huwa hayyu la yamut biyadihi l khayr wa huwa ala kulli shaeyin Qadeer” is a prayer made when?" ,
                     "when entering the toilet","when wearing new clothe","when entering the market","when waking up",3));
 
 
